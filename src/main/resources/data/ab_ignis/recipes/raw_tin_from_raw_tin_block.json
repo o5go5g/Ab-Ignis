@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ab_ignis:fiber"
+    },
+    {
+      "item": "ab_ignis:fiber"
+    },
+    {
+      "item": "ab_ignis:fiber"
+    }
+  ],
+  "result": {
+    "item": "ab_ignis:twine",
+    "count": 1
+  }
+}

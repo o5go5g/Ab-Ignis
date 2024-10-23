@@ -16,6 +16,10 @@ public class ModItems
     public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",() -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> FIBER = ITEMS.register("fiber",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TWINE = ITEMS.register("twine",() -> new Item(new Item.Properties()));
+
+
 
     public static void register(IEventBus eventBus)
     {

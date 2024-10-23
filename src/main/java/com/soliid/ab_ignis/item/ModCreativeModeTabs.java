@@ -23,6 +23,10 @@ public class ModCreativeModeTabs
                 pOutput.accept(ModItems.IRON_BLOOM.get());
                 pOutput.accept(ModItems.RAW_TIN.get());
                 pOutput.accept(ModItems.TIN_INGOT.get());
+                pOutput.accept(ModItems.FIBER.get());
+                pOutput.accept(ModItems.TWINE.get());
+
+
 
                 pOutput.accept(ModBlocks.TIN_BLOCK.get());
                 pOutput.accept(ModBlocks.RAW_TIN_BLOCK.get());

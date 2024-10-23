@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "item": "ab_ignis:raw_tin"
+    }
+  },
+  "result":{
+    "item": "ab_ignis:raw_tin_block"
+  }
+}
