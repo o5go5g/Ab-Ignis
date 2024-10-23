@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ab_ignis:item/iron_bloom"
+    "layer0": "ab_ignis:item/tin_ingot"
   }
 }

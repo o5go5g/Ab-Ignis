@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ab_ignis:block/tin_block"
+    }
+  }
+}
