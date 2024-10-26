@@ -24,6 +24,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider
     {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.TIN_BLOCK.get(),
-                ModBlocks.RAW_TIN_BLOCK.get());
+                ModBlocks.RAW_TIN_BLOCK.get(),
+                ModBlocks.TIN_ORE.get(),
+                ModBlocks.DEEPSLATE_TIN_ORE.get());
     }
 }

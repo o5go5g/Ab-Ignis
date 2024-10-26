@@ -12,6 +12,8 @@
 
 
   "block.ab_ignis.tin_block": "Block of Tin",
-  "block.ab_ignis.raw_tin_block": "Block of Raw Tin"
+  "block.ab_ignis.raw_tin_block": "Block of Raw Tin",
+  "block.ab_ignis.tin_ore": "Tin Ore",
+  "block.ab_ignis.deepslate_tin_ore": "Deepslate Tin Ore"
 
 }

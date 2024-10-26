@@ -1,6 +1,8 @@
 {
   "values": [
     "ab_ignis:tin_block",
-    "ab_ignis:raw_tin_block"
+    "ab_ignis:raw_tin_block",
+    "ab_ignis:tin_ore",
+    "ab_ignis:deepslate_tin_ore"
   ]
 }

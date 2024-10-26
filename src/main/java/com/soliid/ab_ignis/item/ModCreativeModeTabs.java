@@ -33,7 +33,8 @@ public class ModCreativeModeTabs
 
                 pOutput.accept(ModBlocks.TIN_BLOCK.get());
                 pOutput.accept(ModBlocks.RAW_TIN_BLOCK.get());
-
+                pOutput.accept(ModBlocks.TIN_ORE.get());
+                pOutput.accept(ModBlocks.DEEPSLATE_TIN_ORE.get());
             })
             .build());
     public static void register (IEventBus eventBus)

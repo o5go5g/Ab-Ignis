@@ -20,6 +20,8 @@ public class ModBlockStateProvider extends BlockStateProvider
     {
         blockWithItem(ModBlocks.RAW_TIN_BLOCK);
         blockWithItem(ModBlocks.TIN_BLOCK);
+        blockWithItem(ModBlocks.TIN_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_TIN_ORE);
     }
 
     public void blockWithItem (RegistryObject<Block> blockRegistryObject)
