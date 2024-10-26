@@ -1,0 +1,22 @@
+{
+  "type": "ab_ignis:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:grass",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": [
+          "ab_ignis:crook"
+        ]
+      }
+    },
+    {
+      "chance": 0.35,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "ab_ignis:fiber"
+}
