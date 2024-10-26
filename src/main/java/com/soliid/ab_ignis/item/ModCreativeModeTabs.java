@@ -26,6 +26,9 @@ public class ModCreativeModeTabs
                 pOutput.accept(ModItems.FIBER.get());
                 pOutput.accept(ModItems.TWINE.get());
 
+                pOutput.accept(ModItems.CROOK.get());
+                pOutput.accept(ModItems.FLINT_KNIFE.get());
+                pOutput.accept(ModItems.FLINT_HATCHET.get());
 
 
                 pOutput.accept(ModBlocks.TIN_BLOCK.get());

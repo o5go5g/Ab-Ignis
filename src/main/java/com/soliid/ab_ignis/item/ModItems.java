@@ -1,7 +1,7 @@
 package com.soliid.ab_ignis.item;
 
 import com.soliid.ab_ignis.AbIgnis;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,8 +18,11 @@ public class ModItems
 
     public static final RegistryObject<Item> FIBER = ITEMS.register("fiber",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TWINE = ITEMS.register("twine",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CROOK = ITEMS.register("crook",() -> new ShovelItem(Tiers.WOOD,-2,-2, new Item.Properties()));
 
 
+    public static final RegistryObject<Item> FLINT_KNIFE = ITEMS.register("flint_knife", () -> new SwordItem(Tiers.WOOD,1,-1.5f,new Item.Properties()));
+    public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet",() -> new AxeItem(Tiers.WOOD,2,-3f,new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {

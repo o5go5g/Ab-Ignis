@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.soliid.ab_ignis.block.ModBlocks;
 import com.soliid.ab_ignis.item.ModCreativeModeTabs;
 import com.soliid.ab_ignis.item.ModItems;
+import com.soliid.ab_ignis.loot.ModLootModifiers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +29,7 @@ public class AbIgnis
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 

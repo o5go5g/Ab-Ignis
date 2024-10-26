@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ab_ignis:tin_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ab_ignis:blocks/tin_block"
+}

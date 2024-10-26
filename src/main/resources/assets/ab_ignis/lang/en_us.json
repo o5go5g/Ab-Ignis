@@ -6,6 +6,10 @@
   "item.ab_ignis.fiber": "Fiber",
   "item.ab_ignis.twine": "Twine",
 
+  "item.ab_ignis.flint_knife": "Flint Knife",
+  "item.ab_ignis.flint_hatchet": "Flint Hatchet",
+  "item.ab_ignis.crook": "Crook",
+
 
   "block.ab_ignis.tin_block": "Block of Tin",
   "block.ab_ignis.raw_tin_block": "Block of Raw Tin"

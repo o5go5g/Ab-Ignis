@@ -3,17 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "ab_ignis:fiber"
-    },
-    {
-      "item": "ab_ignis:fiber"
-    },
-    {
-      "item": "ab_ignis:fiber"
+      "item": "ab_ignis:raw_tin_block"
     }
   ],
   "result": {
-    "item": "ab_ignis:twine",
-    "count": 1
+    "item": "ab_ignis:raw_tin",
+    "count": 9
   }
 }
