@@ -1,22 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "SF",
-    "ST"
-  ],
   "key": {
-    "T": {
-      "item": "ab_ignis:twine"
-    },
     "F": {
       "item": "minecraft:flint"
     },
     "S": {
       "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "ab_ignis:twine"
     }
   },
-  "result":{
-    "item": "ab_ignis:flint_hatchet"
-  }
+  "pattern": [
+    "TF",
+    "S "
+  ],
+  "result": {
+    "item": "ab_ignis:flint_knife"
+  },
+  "show_notification": true
 }

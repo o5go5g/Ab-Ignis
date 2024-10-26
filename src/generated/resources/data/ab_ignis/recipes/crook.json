@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "SS",
-    "S "
-  ],
   "key": {
     "S": {
       "item": "minecraft:stick"
     }
   },
-  "result":{
+  "pattern": [
+    "SS",
+    "S "
+  ],
+  "result": {
     "item": "ab_ignis:crook"
-  }
+  },
+  "show_notification": true
 }

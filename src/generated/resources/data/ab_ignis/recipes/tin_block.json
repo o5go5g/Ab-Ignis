@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "TTT",
-    "TTT",
-    "TTT"
-  ],
   "key": {
     "T": {
       "item": "ab_ignis:tin_ingot"
     }
   },
-  "result":{
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
     "item": "ab_ignis:tin_block"
-  }
+  },
+  "show_notification": true
 }

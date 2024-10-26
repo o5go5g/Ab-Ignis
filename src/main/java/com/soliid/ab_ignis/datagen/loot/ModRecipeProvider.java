@@ -62,7 +62,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FLINT_KNIFE.get())
                 .pattern("TF")
-                .pattern("S")
+                .pattern("S ")
                 .define('S', Items.STICK)
                 .define('T', ModItems.TWINE.get())
                 .define('F',Items.FLINT)
