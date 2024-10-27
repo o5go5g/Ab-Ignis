@@ -27,5 +27,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider
                 ModBlocks.RAW_TIN_BLOCK.get(),
                 ModBlocks.TIN_ORE.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get());
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(
+                ModBlocks.BONE.get()
+        );
     }
 }

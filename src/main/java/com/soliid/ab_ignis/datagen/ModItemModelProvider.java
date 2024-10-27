@@ -26,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider
         simpleItem(ModItems.TIN_INGOT);
         simpleItem(ModItems.FIBER);
         simpleItem(ModItems.TWINE);
+        simpleItem(ModItems.BONE_SHARD);
         simpleItem(ModItems.FLINT_HATCHET);
         simpleItem(ModItems.FLINT_KNIFE);
     }

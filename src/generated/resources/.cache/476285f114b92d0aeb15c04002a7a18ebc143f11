@@ -1,4 +1,6 @@
-// 1.20.1	2024-10-27T01:08:32.126375	Global Loot Modifiers : ab_ignis
-33c928139b97e5d79923a0994924e3d67c8c06dd data/ab_ignis/loot_modifiers/bones_from_pig.json
-385109dada1f97d57a63609d99a471372fcd9c07 data/ab_ignis/loot_modifiers/fiber_from_grass.json
-aca92b09cd97cef01b0dff359e6530166fc11ac8 data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.20.1	2024-10-27T17:06:42.2053289	Global Loot Modifiers : ab_ignis
+e09fbfa43ae6122d0fdd4b212b979f96553aad39 data/ab_ignis/loot_modifiers/bones_from_cow.json
+506d75cbb4290f253b5b7226288bce423db0dd9c data/ab_ignis/loot_modifiers/bones_from_pig.json
+f08cc4b0e24aa163380ceb4ac5576254b8cc9b7d data/ab_ignis/loot_modifiers/bones_from_sheep.json
+c2dc565aef41c8c5316c607fa1f504f3728bda4e data/ab_ignis/loot_modifiers/fiber_from_grass.json
+6a9d9f03c60fb790431aad8a4649ae1f70cf90f6 data/forge/loot_modifiers/global_loot_modifiers.json

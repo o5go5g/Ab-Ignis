@@ -1,7 +1,9 @@
 {
   "entries": [
     "ab_ignis:fiber_from_grass",
-    "ab_ignis:bones_from_pig"
+    "ab_ignis:bones_from_pig",
+    "ab_ignis:bones_from_cow",
+    "ab_ignis:bones_from_sheep"
   ],
   "replace": false
 }

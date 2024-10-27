@@ -1,19 +1,20 @@
 package com.soliid.ab_ignis.datagen;
 
 import com.soliid.ab_ignis.AbIgnis;
+import com.soliid.ab_ignis.block.ModBlocks;
 import com.soliid.ab_ignis.item.ModItems;
 import com.soliid.ab_ignis.loot.AddItemModifier;
-import net.minecraft.advancements.critereon.EntityEquipmentPredicate;
-import net.minecraft.advancements.critereon.EntityPredicate;
-import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.Registry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -46,6 +47,5 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/sheep")).build(),
                 LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.KILLER, new EntityPredicate.Builder().equipment(new EntityEquipmentPredicate.Builder().mainhand(ItemPredicate.Builder.item().of(ModItems.FLINT_KNIFE.get()).build()).build()).build()).build(),
                 LootItemRandomChanceCondition.randomChance(0.25f).build()}, Items.BONE));
-
-    }
+        }
 }

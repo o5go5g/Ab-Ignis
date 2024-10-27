@@ -1,4 +1,5 @@
-// 1.20.1	2024-10-26T01:00:45.5339465	Loot Tables
+// 1.20.1	2024-10-27T17:06:42.2108516	Loot Tables
+ba945459d75bf134d76b48405c3df4bfe537c049 data/ab_ignis/loot_tables/blocks/bone.json
 53373b20c7d1dedb3e13a08576c0173cedba4889 data/ab_ignis/loot_tables/blocks/deepslate_tin_ore.json
 16401a4d30f7a485647542ccd45c07d5c45b6436 data/ab_ignis/loot_tables/blocks/raw_tin_block.json
 110d95bd0a62d2e6195b88fecef03e16b8353486 data/ab_ignis/loot_tables/blocks/tin_block.json

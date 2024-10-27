@@ -78,6 +78,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.RAW_TIN_BLOCK.get()), has(ModBlocks.RAW_TIN_BLOCK.get()))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STRING, 2)
+                .requires(ModItems.TWINE.get())
+                .unlockedBy(getHasName(ModItems.TWINE.get()), has(ModItems.TWINE.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TWINE.get(), 1)
                 .requires(ModItems.FIBER.get())
                 .requires(ModItems.FIBER.get())

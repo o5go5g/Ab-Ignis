@@ -17,6 +17,10 @@
           }
         }
       }
+    },
+    {
+      "chance": 0.25,
+      "condition": "minecraft:random_chance"
     }
   ],
   "item": "minecraft:bone"

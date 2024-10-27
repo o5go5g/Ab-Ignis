@@ -1,4 +1,4 @@
-// 1.20.1	2024-10-26T01:31:59.1233305	Recipes
+// 1.20.1	2024-10-27T01:30:24.7015174	Recipes
 30ec644313232b726807fba0e5f4b294a5e9fabd data/ab_ignis/advancements/recipes/misc/crook.json
 e47ed899f45fef53c54f96387effb193d54c271e data/ab_ignis/advancements/recipes/misc/flint_hatchet.json
 1a13c5307c79d9ff2dc0e3c1bdcc0d3120ec662f data/ab_ignis/advancements/recipes/misc/flint_knife.json
@@ -27,3 +27,5 @@ b3fd9df4e967db08b1fdbfe20ce33053ac0007ba data/ab_ignis/recipes/tin_ingot_from_bl
 112dc7651689414b3b3961f636e705c1b7983580 data/ab_ignis/recipes/tin_ingot_from_smelting_raw_tin.json
 cda6e45c117c74bbda2de5851ed516a141eda2eb data/ab_ignis/recipes/tin_ingot_from_smelting_tin_ore.json
 d41e124e2fa1923e5fd1e403c9b4f36c77fb006e data/ab_ignis/recipes/twine.json
+6c55c1f6118272a756cf5cb91cb7fbe8e5664794 data/minecraft/advancements/recipes/misc/string.json
+d618e49a9399109cc443cc0e842208496fc953c9 data/minecraft/recipes/string.json
