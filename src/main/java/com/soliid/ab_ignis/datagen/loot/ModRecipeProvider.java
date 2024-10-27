@@ -17,7 +17,7 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder
 {
-    private static List<ItemLike> TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get());
+    private static List<ItemLike> TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(),ModBlocks.TIN_ORE.get(),ModBlocks.DEEPSLATE_TIN_ORE.get());
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }

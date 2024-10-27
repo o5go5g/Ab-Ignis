@@ -1,6 +1,8 @@
 package com.soliid.ab_ignis.item;
 
 import com.soliid.ab_ignis.AbIgnis;
+import com.soliid.ab_ignis.item.custom.FuelItem;
+import com.soliid.ab_ignis.item.custom.FuelShovelItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,9 +18,9 @@ public class ModItems
     public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",() -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> FIBER = ITEMS.register("fiber",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FIBER = ITEMS.register("fiber",() -> new FuelItem(new Item.Properties(), 50));
     public static final RegistryObject<Item> TWINE = ITEMS.register("twine",() -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CROOK = ITEMS.register("crook",() -> new ShovelItem(Tiers.WOOD,-0.5f,-2, new Item.Properties()));
+    public static final RegistryObject<Item> CROOK = ITEMS.register("crook",() -> new FuelShovelItem(Tiers.WOOD,-0.5f,-1f,new Item.Properties(),200));
 
 
     public static final RegistryObject<Item> FLINT_KNIFE = ITEMS.register("flint_knife", () -> new SwordItem(Tiers.WOOD,1,-1.5f,new Item.Properties()));

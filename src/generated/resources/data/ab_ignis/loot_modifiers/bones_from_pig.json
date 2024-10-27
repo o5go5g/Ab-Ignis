@@ -1,0 +1,23 @@
+{
+  "type": "ab_ignis:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/pig"
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "killer",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": [
+              "ab_ignis:flint_knife"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "item": "minecraft:bone"
+}
