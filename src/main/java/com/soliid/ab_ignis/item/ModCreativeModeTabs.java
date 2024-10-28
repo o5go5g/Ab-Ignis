@@ -26,6 +26,10 @@ public class ModCreativeModeTabs
                 pOutput.accept(ModItems.FIBER.get());
                 pOutput.accept(ModItems.TWINE.get());
                 pOutput.accept(ModItems.BONE_SHARD.get());
+                pOutput.accept(ModItems.TANNED_LEATHER.get());
+                pOutput.accept(ModItems.LIMESALT.get());
+                pOutput.accept(ModItems.MESH.get());
+                pOutput.accept(ModItems.SIEVE.get());
 
                 pOutput.accept(ModItems.CROOK.get());
                 pOutput.accept(ModItems.FLINT_KNIFE.get());

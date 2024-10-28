@@ -5,6 +5,7 @@ import com.soliid.ab_ignis.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -29,7 +30,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider
                 ModBlocks.DEEPSLATE_TIN_ORE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(
-                ModBlocks.BONE.get()
+                ModBlocks.BONE.get(),
+                Blocks.ACACIA_LOG,
+                Blocks.BIRCH_LOG,
+                Blocks.CHERRY_LOG,
+                Blocks.OAK_LOG,
+                Blocks.JUNGLE_LOG,
+                Blocks.DARK_OAK_LOG,
+                Blocks.MANGROVE_LOG,
+                Blocks.SPRUCE_LOG
         );
     }
 }

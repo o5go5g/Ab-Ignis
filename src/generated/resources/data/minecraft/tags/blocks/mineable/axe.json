@@ -1,5 +1,13 @@
 {
   "values": [
-    "ab_ignis:bone"
+    "ab_ignis:bone",
+    "minecraft:acacia_log",
+    "minecraft:birch_log",
+    "minecraft:cherry_log",
+    "minecraft:oak_log",
+    "minecraft:jungle_log",
+    "minecraft:dark_oak_log",
+    "minecraft:mangrove_log",
+    "minecraft:spruce_log"
   ]
 }

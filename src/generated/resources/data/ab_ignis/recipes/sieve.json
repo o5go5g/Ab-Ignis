@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "ab_ignis:mesh"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "ab_ignis:twine"
+    }
+  },
+  "pattern": [
+    "TST",
+    "SMS",
+    "TST"
+  ],
+  "result": {
+    "item": "ab_ignis:sieve"
+  },
+  "show_notification": true
+}
