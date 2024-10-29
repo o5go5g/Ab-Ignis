@@ -1,4 +1,5 @@
-// 1.20.1	2024-10-27T16:04:38.3662589	Tags for minecraft:item mod id ab_ignis
+// 1.20.1	2024-10-28T10:28:43.3915626	Tags for minecraft:item mod id ab_ignis
+5bb981be1f047d8ecd92989fb46d73bace089c23 data/ab_ignis/tags/items/metal_detector_valuables.json
 ed6fc26232fb4898353d29b6e092cccf06917508 data/minecraft/tags/items/axes.json
 10d0622e52c4d031e66e82ee751737a04e356668 data/minecraft/tags/items/shovels.json
 2d2d0532f67f8b9d234c51e760a0c88a3c2ab933 data/minecraft/tags/items/swords.json

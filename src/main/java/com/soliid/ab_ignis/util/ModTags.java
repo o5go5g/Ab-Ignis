@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags
 {
+
     public static class Blocks
     {
         //public static final TagKey<Block> NEEDS_FLINT_TOOL = tag("needs_flint_tool");
@@ -25,5 +26,7 @@ public class ModTags
         {
             return ItemTags.create(new ResourceLocation(AbIgnis.MOD_ID, name));
         }
+
+        public static final TagKey<Item> SIEVEABLE = tag("metal_detector_valuables");
     }
 }

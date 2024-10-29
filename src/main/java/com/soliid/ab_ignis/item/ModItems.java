@@ -3,6 +3,7 @@ package com.soliid.ab_ignis.item;
 import com.soliid.ab_ignis.AbIgnis;
 import com.soliid.ab_ignis.item.custom.FuelItem;
 import com.soliid.ab_ignis.item.custom.FuelShovelItem;
+import com.soliid.ab_ignis.item.custom.SieveItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,7 +25,7 @@ public class ModItems
     public static final RegistryObject<Item> TANNED_LEATHER = ITEMS.register("tanned_leather",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LIMESALT = ITEMS.register("limesalt",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MESH = ITEMS.register("mesh",() -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SIEVE = ITEMS.register("sieve",() -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SIEVE = ITEMS.register("sieve",() -> new SieveItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> CROOK = ITEMS.register("crook",() -> new FuelShovelItem(Tiers.WOOD,-0.5f,-1f,new Item.Properties(),200));
 

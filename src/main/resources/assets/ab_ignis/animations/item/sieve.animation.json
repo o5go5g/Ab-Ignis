@@ -1,0 +1,185 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"model.idle": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"sand": {
+					"position": {
+						"vector": [0, -100, 0]
+					}
+				},
+				"gravel": {
+					"position": {
+						"vector": [0, -100, 0]
+					}
+				},
+				"dirt": {
+					"position": {
+						"vector": [0, -100, 0]
+					}
+				},
+				"mud": {
+					"position": {
+						"vector": [0, -100, 0]
+					}
+				},
+				"red_sand": {
+					"position": {
+						"vector": [0, -100, 0]
+					}
+				},
+				"soul_sand": {
+					"position": {
+						"vector": [0, -100, 0]
+					}
+				},
+				"soul_soil": {
+					"position": {
+						"vector": [0, -100, 0]
+					}
+				},
+				"sieve": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"model.sand": {
+			"animation_length": 2,
+			"bones": {
+				"sieve": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.125": {
+							"vector": [0, 0, -2]
+						},
+						"0.25": {
+							"vector": [0, 0, 2]
+						},
+						"0.375": {
+							"vector": [0, 0, -2]
+						},
+						"0.5": {
+							"vector": [0, 0, 2]
+						},
+						"0.625": {
+							"vector": [0, 0, -2]
+						},
+						"0.7917": {
+							"vector": [0, 0, 2],
+							"easing": "easeInSine"
+						},
+						"1.0": {
+							"vector": [0, 0, -2],
+							"easing": "easeInSine"
+						},
+						"1.2083": {
+							"vector": [0, 0, 2],
+							"easing": "easeInSine"
+						},
+						"1.4167": {
+							"vector": [0, 0, -2]
+						},
+						"1.625": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"sand": {
+					"position": {
+						"0.0": {
+							"vector": [0, 100, 0]
+						},
+						"0.125": {
+							"vector": [0, 99, -2]
+						},
+						"0.25": {
+							"vector": [0, 98, 2]
+						},
+						"0.375": {
+							"vector": [0, 97, -2]
+						},
+						"0.5": {
+							"vector": [0, 96, 2]
+						},
+						"0.625": {
+							"vector": [0, 96, -2]
+						},
+						"0.7917": {
+							"vector": [0, 96, 2],
+							"easing": "easeInSine"
+						},
+						"1.0": {
+							"vector": [0, 96, -2],
+							"easing": "easeInSine"
+						},
+						"1.2083": {
+							"vector": [0, 96, 2],
+							"easing": "easeInSine"
+						},
+						"1.4167": {
+							"vector": [0, 95.5, -2]
+						},
+						"1.625": {
+							"vector": [0, 96, 0]
+						},
+						"1.9583": {
+							"vector": [0, 98, 0]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"1.4167": {
+							"vector": [1, 0.4, 1]
+						},
+						"1.9583": {
+							"vector": [1, 0.1, 1]
+						},
+						"2.0": {
+							"vector": [0, 0, 0],
+							"easing": "easeInExpo"
+						}
+					}
+				},
+				"gravel": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"dirt": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"mud": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"red_sand": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"soul_sand": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"soul_soil": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
