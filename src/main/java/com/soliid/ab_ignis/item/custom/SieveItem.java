@@ -1,5 +1,6 @@
 package com.soliid.ab_ignis.item.custom;
 
+import com.soliid.ab_ignis.event.ModEvents;
 import com.soliid.ab_ignis.geo.SieveItemRenderer;
 
 import com.soliid.ab_ignis.item.ModItems;
@@ -73,7 +74,7 @@ public class SieveItem extends Item implements GeoItem
                 ItemStack offhandItem = player.getOffhandItem();
                 if (!player.isCreative())
                     offhandItem.shrink(1);
-                player.addItem(new ItemStack(ModItems.LIMESALT.get()));
+                ModEvents.startItemCountdown(player,ModItems.LIMESALT.get(),120);
             }
         }
         return super.use(level, player, hand);
