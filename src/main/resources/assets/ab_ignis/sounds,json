@@ -1,0 +1,10 @@
+{
+  "sand_sieve": {
+    "sounds": [
+      {
+        "name": "ab_ignis:sand_sieve",
+        "stream": true
+      }
+    ]
+  }
+}

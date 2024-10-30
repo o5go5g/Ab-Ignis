@@ -26,7 +26,5 @@ public class ModTags
         {
             return ItemTags.create(new ResourceLocation(AbIgnis.MOD_ID, name));
         }
-
-        public static final TagKey<Item> SIEVEABLE = tag("metal_detector_valuables");
     }
 }

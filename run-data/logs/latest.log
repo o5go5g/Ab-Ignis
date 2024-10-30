@@ -1,34 +1,34 @@
-[28Oct2024 20:06:22.590] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\jbver\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, ab_ignis, --all, --output, C:\Ab Ignis\src\generated\resources, --existing, C:\Ab Ignis\src\main\resources]
-[28Oct2024 20:06:22.601] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
-[28Oct2024 20:06:22.811] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[28Oct2024 20:06:22.905] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/jbver/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[28Oct2024 20:06:23.340] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[28Oct2024 20:06:23.346] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[28Oct2024 20:06:23.352] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[28Oct2024 20:06:23.358] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
-[28Oct2024 20:06:23.605] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[28Oct2024 20:06:25.759] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[28Oct2024 20:06:25.764] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\jbver\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, ab_ignis, --all, --output, C:\Ab Ignis\src\generated\resources, --existing, C:\Ab Ignis\src\main\resources]
-[28Oct2024 20:06:26.199] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Ab Ignis\build\createSrgToMcp\output.srg
-[28Oct2024 20:06:26.784] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [ab_ignis]
-[28Oct2024 20:06:33.577] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
-[28Oct2024 20:06:33.582] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
-[28Oct2024 20:06:33.728] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[28Oct2024 20:06:34.690] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/jbver/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2/forge-1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[28Oct2024 20:06:34.690] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/jbver/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2/forge-1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[28Oct2024 20:06:35.075] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[28Oct2024 20:06:35.149] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 73 ms
-[28Oct2024 20:06:35.151] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[28Oct2024 20:06:35.223] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 72 ms
-[28Oct2024 20:06:35.224] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: ab_ignis
-[28Oct2024 20:06:35.417] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: ab_ignis finished after 192 ms
-[28Oct2024 20:06:35.417] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: ab_ignis
-[28Oct2024 20:06:35.429] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: ab_ignis finished after 12 ms
-[28Oct2024 20:06:35.430] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id ab_ignis
-[28Oct2024 20:06:35.449] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id ab_ignis finished after 19 ms
-[28Oct2024 20:06:35.450] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id ab_ignis
-[28Oct2024 20:06:35.454] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id ab_ignis finished after 4 ms
-[28Oct2024 20:06:35.455] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : ab_ignis
-[28Oct2024 20:06:35.563] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : ab_ignis finished after 108 ms
-[28Oct2024 20:06:35.563] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 489 ms
-[28Oct2024 20:06:35.581] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 75, old count: 75, new count: 76, removed stale: 0, written: 0
+[29Oct2024 19:46:05.456] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\jbver\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, ab_ignis, --all, --output, C:\Ab Ignis\src\generated\resources, --existing, C:\Ab Ignis\src\main\resources]
+[29Oct2024 19:46:05.465] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[29Oct2024 19:46:05.584] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[29Oct2024 19:46:05.646] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/jbver/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[29Oct2024 19:46:06.016] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[29Oct2024 19:46:06.021] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[29Oct2024 19:46:06.026] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[29Oct2024 19:46:06.032] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\jbver\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
+[29Oct2024 19:46:06.176] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[29Oct2024 19:46:07.910] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[29Oct2024 19:46:07.913] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\jbver\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, ab_ignis, --all, --output, C:\Ab Ignis\src\generated\resources, --existing, C:\Ab Ignis\src\main\resources]
+[29Oct2024 19:46:08.323] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Ab Ignis\build\createSrgToMcp\output.srg
+[29Oct2024 19:46:08.975] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [ab_ignis]
+[29Oct2024 19:46:13.149] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
+[29Oct2024 19:46:13.155] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
+[29Oct2024 19:46:13.216] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[29Oct2024 19:46:13.972] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/jbver/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2/forge-1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[29Oct2024 19:46:13.973] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/jbver/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2/forge-1.20.1-47.2.0_mapped_parchment_2023.10.08-1.20.2-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[29Oct2024 19:46:14.321] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[29Oct2024 19:46:14.380] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 57 ms
+[29Oct2024 19:46:14.380] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[29Oct2024 19:46:14.422] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 41 ms
+[29Oct2024 19:46:14.422] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: ab_ignis
+[29Oct2024 19:46:14.535] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: ab_ignis finished after 113 ms
+[29Oct2024 19:46:14.536] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: ab_ignis
+[29Oct2024 19:46:14.548] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: ab_ignis finished after 11 ms
+[29Oct2024 19:46:14.548] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id ab_ignis
+[29Oct2024 19:46:14.559] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id ab_ignis finished after 10 ms
+[29Oct2024 19:46:14.559] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id ab_ignis
+[29Oct2024 19:46:14.560] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id ab_ignis finished after 1 ms
+[29Oct2024 19:46:14.560] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : ab_ignis
+[29Oct2024 19:46:14.622] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : ab_ignis finished after 61 ms
+[29Oct2024 19:46:14.622] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 301 ms
+[29Oct2024 19:46:14.634] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 74, old count: 74, new count: 75, removed stale: 0, written: 0

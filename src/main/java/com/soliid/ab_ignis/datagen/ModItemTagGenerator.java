@@ -29,9 +29,5 @@ public class ModItemTagGenerator extends ItemTagsProvider
                 .add(ModItems.FLINT_KNIFE.get());
         this.tag(ItemTags.SHOVELS)
                 .add(ModItems.CROOK.get());
-        this.tag(ModTags.Items.SIEVEABLE)
-                .add(Items.SAND);
-        this.tag(ModTags.Items.SIEVEABLE)
-                .add(Items.DIRT);
     }
 }

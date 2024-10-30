@@ -5,7 +5,7 @@ import com.soliid.ab_ignis.block.ModBlocks;
 import com.soliid.ab_ignis.item.ModCreativeModeTabs;
 import com.soliid.ab_ignis.item.ModItems;
 import com.soliid.ab_ignis.loot.ModLootModifiers;
-import net.minecraft.world.item.CreativeModeTabs;
+import com.soliid.ab_ignis.sound.ModSounds;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,7 +17,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
+@Mod.EventBusSubscriber
 @Mod(AbIgnis.MOD_ID)
 public class AbIgnis
 {
@@ -26,9 +28,12 @@ public class AbIgnis
 
     public AbIgnis()
     {
+        GeckoLib.initialize();
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModSounds.SOUNDS.register(modEventBus);
         ModLootModifiers.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
