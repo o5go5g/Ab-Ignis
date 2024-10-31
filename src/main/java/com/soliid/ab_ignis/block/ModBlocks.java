@@ -2,6 +2,7 @@ package com.soliid.ab_ignis.block;
 
 import com.soliid.ab_ignis.AbIgnis;
 import com.soliid.ab_ignis.block.custom.BoneBlock;
+import com.soliid.ab_ignis.block.custom.FilterBlock;
 import com.soliid.ab_ignis.item.ModItems;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.BlockItem;
@@ -27,6 +28,7 @@ public class ModBlocks
     public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
     public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
     public static final RegistryObject<Block> BONE = registerBlock("bone", () -> new BoneBlock(BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.DEEPSLATE).noOcclusion().requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> FILTER = registerBlock("filter", () -> new FilterBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

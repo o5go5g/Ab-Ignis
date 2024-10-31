@@ -107,6 +107,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.FIBER.get())
                 .unlockedBy(getHasName(ModItems.FIBER.get()), has(ModItems.FIBER.get()))
                 .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.FILTER.get(), 1)
+                .requires(ModItems.SIEVE.get())
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SIEVE.get(), 1)
+                .requires(ModBlocks.FILTER.get())
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(pWriter,"sieve_from_filter");
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

@@ -1,6 +1,7 @@
-// 1.20.1	2024-10-27T02:34:39.1332562	Block States: ab_ignis
+// 1.20.1	2024-10-30T22:32:57.9212748	Block States: ab_ignis
 5d0423d087f9f78de1794eb51db9224d9bf3e1ae assets/ab_ignis/blockstates/bone.json
 805ff069a73d8a86f4a7246e9e422156cbb385e6 assets/ab_ignis/blockstates/deepslate_tin_ore.json
+b165fcb099598b02b21e4d8498f60408d8dbb274 assets/ab_ignis/blockstates/filter.json
 b33423dd1bacacd612a86eee320b632d52b10754 assets/ab_ignis/blockstates/raw_tin_block.json
 6655dda290cb4b6311c7809061d9bacfd6ec8a78 assets/ab_ignis/blockstates/tin_block.json
 6c7e2fc6a7d8531d17a5c3c86913dfc97fc3772d assets/ab_ignis/blockstates/tin_ore.json

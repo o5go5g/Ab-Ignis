@@ -26,6 +26,9 @@ public class ModBlockStateProvider extends BlockStateProvider
 
         simpleBlock(ModBlocks.BONE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/bone")));
+        simpleBlock(ModBlocks.FILTER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/filter")));
+
     }
 
     public void blockWithItem (RegistryObject<Block> blockRegistryObject)

@@ -30,6 +30,8 @@ public class ModCreativeModeTabs
                 pOutput.accept(ModItems.LIMESALT.get());
                 pOutput.accept(ModItems.MESH.get());
                 pOutput.accept(ModItems.SIEVE.get());
+                pOutput.accept(ModBlocks.FILTER.get());
+
 
                 pOutput.accept(ModItems.CROOK.get());
                 pOutput.accept(ModItems.FLINT_KNIFE.get());

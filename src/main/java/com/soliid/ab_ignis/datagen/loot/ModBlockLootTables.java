@@ -37,6 +37,8 @@ public class ModBlockLootTables extends BlockLootSubProvider
     {
         this.dropSelf(ModBlocks.TIN_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
+        this.dropSelf(ModBlocks.FILTER.get());
+
 
         this.add(ModBlocks.TIN_ORE.get(),
                 block -> createIronLikeOreDrops(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get()));
