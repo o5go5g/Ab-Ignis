@@ -1,25 +1,25 @@
 package com.soliid.ab_ignis.event;
 
 import java.util.*;
+
 import com.soliid.ab_ignis.AbIgnis;
 import com.soliid.ab_ignis.block.ModBlocks;
 import com.soliid.ab_ignis.item.ModItems;
 import com.soliid.ab_ignis.item.custom.SieveItem;
-import com.soliid.ab_ignis.util.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.datafix.fixes.ItemStackTagFix;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderHandEvent;
 import net.minecraftforge.event.TickEvent;
@@ -29,7 +29,6 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 import java.util.UUID;
 
 @Mod.EventBusSubscriber(modid = AbIgnis.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
@@ -88,13 +87,13 @@ public class ModEvents
         if (playerCountdowns.containsKey(player.getUUID())) {
             CountdownData countdownData = playerCountdowns.get(player.getUUID());
             countdownData.ticksRemaining--;
-            if (countdownData.ticksRemaining % 10 == 0)
+            Level level = player.level();
+            if (countdownData.ticksRemaining % 7 == 0)
             {
-                Level level = player.level();
                 if (player.getOffhandItem().is(Items.SAND) || player.getOffhandItem().is(Items.RED_SAND))
                     level.playSound(null,new BlockPos(new Vec3i(player.getBlockX(),player.getBlockY(),player.getBlockZ())), SoundEvents.BRUSH_SAND, SoundSource.BLOCKS,0.5f,1f);
                 if (player.getOffhandItem().is(Items.GRAVEL))
-                    level.playSound(null,new BlockPos(new Vec3i(player.getBlockX(),player.getBlockY(),player.getBlockZ())), SoundEvents.GRAVEL_STEP, SoundSource.BLOCKS,0.5f,1f);
+                    level.playSound(null,new BlockPos(new Vec3i(player.getBlockX(),player.getBlockY(),player.getBlockZ())), SoundEvents.GRAVEL_STEP, SoundSource.BLOCKS,0.35f,1f);
                 if (player.getOffhandItem().is(Items.DIRT))
                     level.playSound(null,new BlockPos(new Vec3i(player.getBlockX(),player.getBlockY(),player.getBlockZ())), SoundEvents.ROOTED_DIRT_PLACE, SoundSource.BLOCKS,0.5f,1f);
                 if (player.getOffhandItem().is(Items.MUD))
@@ -103,10 +102,12 @@ public class ModEvents
                     level.playSound(null,new BlockPos(new Vec3i(player.getBlockX(),player.getBlockY(),player.getBlockZ())), SoundEvents.SOUL_SOIL_STEP, SoundSource.BLOCKS,0.5f,1f);
             }
             if (countdownData.ticksRemaining <= 0) {
-                for (ItemStack entry : countdownData.itemStack) {
-                    player.getInventory().add(entry);
+                for (ItemStack entry : countdownData.itemStack)
+                {
+                    ItemEntity item = new ItemEntity(level,0,0,0,entry);
+                    item.moveTo(player.getX(),player.getY(),player.getZ());
+                    level.addFreshEntity(item);
                 }
-                playerCountdowns.remove(player.getUUID());
                 if (player.getMainHandItem().getItem() instanceof SieveItem sieveItem) {
                     sieveItem.isAnimating = false;
                     if (!player.isCreative())
@@ -119,11 +120,25 @@ public class ModEvents
                             sieveItem.isAnimating = false;
                             if (!player.isCreative())
                                 sieveItem.setDamage(stack,stack.getDamageValue()+1);
+                            break;
                         }
                     }
                 }
             }
+            if (countdownData.ticksRemaining <=-1)
+                playerCountdowns.remove(player.getUUID());
         }
     }
-
+/*
+    @SubscribeEvent
+    public static void onDropItem(ItemTossEvent event)
+    {
+        Player player = event.getPlayer();
+        if (player != null && player.getMainHandItem().getItem() instanceof SieveItem item)
+        {
+            if (item.getAnimationState())
+                item.setAnimationState(false);
+        }
+    }
+ */
 }

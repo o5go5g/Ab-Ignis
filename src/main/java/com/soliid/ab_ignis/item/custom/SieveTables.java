@@ -89,9 +89,10 @@ public class SieveTables
         //9 Raw Tin - 0.1%
 
         ArrayList<Integer> chances = new ArrayList<>();
+        System.out.println(chances);
 
         for (int i = 0; i <= 8; i++) {
-            int randomNumber = random.nextInt(10000);
+            int randomNumber = random.nextInt(20000);
             chances.add(randomNumber);
         }
 
@@ -142,7 +143,6 @@ public class SieveTables
                 dirtDrop.add(dirtResults.get(x));
             }
         }
-        System.out.println(dirtDrop);
         return dirtDrop;
     }
 
@@ -181,7 +181,6 @@ public class SieveTables
                 dirtDrop.add(mudResults.get(x));
             }
         }
-        System.out.println(dirtDrop);
         return dirtDrop;
     }
 
@@ -223,7 +222,6 @@ public class SieveTables
                 redSandDrop.add(redSandResults.get(x));
             }
         }
-        System.out.println(redSandDrop);
         return redSandDrop;
     }
 
@@ -265,7 +263,6 @@ public class SieveTables
                 soulDrop.add(soulResults.get(x));
             }
         }
-        System.out.println(soulDrop);
         return soulDrop;
     }
 }

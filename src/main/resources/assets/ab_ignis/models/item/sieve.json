@@ -54,6 +54,13 @@
         -6
       ]
     },
+    "ground": {
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
     "gui": {
       "rotation": [
         25.5,
@@ -87,6 +94,6 @@
     }
   },
   "textures": {
-    "particle": "ab_ignis:item/sieve"
+    "particle": "item/texture1"
   }
 }

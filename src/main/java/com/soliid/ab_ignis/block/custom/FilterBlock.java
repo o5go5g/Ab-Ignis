@@ -1,16 +1,22 @@
 package com.soliid.ab_ignis.block.custom;
 
 import com.soliid.ab_ignis.block.entity.FilterBlockEntity;
+import com.soliid.ab_ignis.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.HopperBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -51,19 +57,33 @@ public class FilterBlock extends HorizontalDirectionalBlock implements EntityBlo
         pBuilder.add(FACING,AXIS,WATERLOGGED);
     }
 
+    public void setPlacedBy(Level pLevel, BlockPos pPos, BlockState pState, LivingEntity pPlacer, ItemStack pStack) {
+        if (pStack.hasCustomHoverName()) {
+            BlockEntity blockentity = pLevel.getBlockEntity(pPos);
+            if (blockentity instanceof HopperBlockEntity) {
+                ((HopperBlockEntity)blockentity).setCustomName(pStack.getHoverName());
+            }
+        }
+    }
+
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new FilterBlockEntity(pPos, pState);
     }
 
+
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (pLevel.isClientSide()) {
+        if (pLevel.isClientSide) {
             return InteractionResult.SUCCESS;
+        } else {
+            BlockEntity blockentity = pLevel.getBlockEntity(pPos);
+            if (blockentity instanceof FilterBlockEntity) {
+                pPlayer.openMenu((MenuProvider) blockentity);
+            }
+            return InteractionResult.CONSUME;
         }
-
-        return InteractionResult.CONSUME;
     }
 
     @Override

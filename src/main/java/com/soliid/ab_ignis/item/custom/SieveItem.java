@@ -3,16 +3,12 @@ package com.soliid.ab_ignis.item.custom;
 import com.soliid.ab_ignis.event.ModEvents;
 import com.soliid.ab_ignis.geo.SieveItemRenderer;
 
-import com.soliid.ab_ignis.item.ModItems;
-import com.soliid.ab_ignis.sound.ModSounds;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -29,22 +25,28 @@ import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.util.ClientUtils;
 import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.util.RenderUtils;
 
-import java.util.ArrayList;
-import java.util.Random;
 import java.util.function.Consumer;
 
 public class SieveItem extends Item implements GeoItem
 {
-    private int burnTime = 40;
+    private final int burnTime = 40;
     public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
         return this.burnTime;
     }
 
     public boolean isAnimating = false;
+
+    public boolean getAnimationState()
+    {
+        return isAnimating;
+    }
+
+    public void setAnimationState(Boolean bool)
+    {
+        this.isAnimating = bool;
+    }
 
     private static final RawAnimation SAND_SIEVE_ANIM = RawAnimation.begin().thenPlay("model.sand");
     private static final RawAnimation GRAVEL_SIEVE_ANIM = RawAnimation.begin().thenPlay("model.gravel");
@@ -68,7 +70,6 @@ public class SieveItem extends Item implements GeoItem
                 animationState.getController().setAnimation(RawAnimation.begin().then("model.idle", Animation.LoopType.LOOP));
                 return PlayState.CONTINUE;
         }
-
 
         return PlayState.STOP;
     }
@@ -114,57 +115,57 @@ public class SieveItem extends Item implements GeoItem
             }
             if (player.getOffhandItem().is(Items.SAND))
             {
-                isAnimating = true;
+                this.isAnimating = true;
                 triggerAnim(player, GeoItem.getOrAssignId(player.getItemInHand(hand), serverLevel), "Sand", "sand");
                 ItemStack offhandItem = player.getOffhandItem();
-                ModEvents.startItemCountdown(player,SieveTables.getSandDrops(),160);
+                ModEvents.startItemCountdown(player,SieveTables.getSandDrops(),180);
                 if (!player.isCreative())
                     offhandItem.shrink(1);
             }
             if (player.getOffhandItem().is(Items.GRAVEL))
             {
-                isAnimating = true;
+                this.isAnimating = true;
                 triggerAnim(player, GeoItem.getOrAssignId(player.getItemInHand(hand), serverLevel), "Gravel", "gravel");
                 ItemStack offhandItem = player.getOffhandItem();
+                ModEvents.startItemCountdown(player,SieveTables.getGravelDrops(),180);
                 if (!player.isCreative())
                     offhandItem.shrink(1);
-                ModEvents.startItemCountdown(player,SieveTables.getGravelDrops(),160);
             }
             if (player.getOffhandItem().is(Items.DIRT))
             {
-                isAnimating = true;
+                this.isAnimating = true;
                 triggerAnim(player, GeoItem.getOrAssignId(player.getItemInHand(hand), serverLevel), "Dirt", "dirt");
                 ItemStack offhandItem = player.getOffhandItem();
                 if (!player.isCreative())
                     offhandItem.shrink(1);
-                ModEvents.startItemCountdown(player,SieveTables.getDirtDrops(),160);
+                ModEvents.startItemCountdown(player,SieveTables.getDirtDrops(),180);
             }
             if (player.getOffhandItem().is(Items.MUD))
             {
-                isAnimating = true;
+                this.isAnimating = true;
                 triggerAnim(player, GeoItem.getOrAssignId(player.getItemInHand(hand), serverLevel), "Mud", "mud");
                 ItemStack offhandItem = player.getOffhandItem();
                 if (!player.isCreative())
                     offhandItem.shrink(1);
-                ModEvents.startItemCountdown(player,SieveTables.getMudDrops(),160);
+                ModEvents.startItemCountdown(player,SieveTables.getMudDrops(),180);
             }
             if (player.getOffhandItem().is(Items.RED_SAND))
             {
-                isAnimating = true;
+                this.isAnimating = true;
                 triggerAnim(player, GeoItem.getOrAssignId(player.getItemInHand(hand), serverLevel), "Red Sand", "red_sand");
                 ItemStack offhandItem = player.getOffhandItem();
                 if (!player.isCreative())
                     offhandItem.shrink(1);
-                ModEvents.startItemCountdown(player,SieveTables.getRedSandDrops(),160);
+                ModEvents.startItemCountdown(player,SieveTables.getRedSandDrops(),180);
             }
             if (player.getOffhandItem().is(Items.SOUL_SAND))
             {
-                isAnimating = true;
+                this.isAnimating = true;
                 triggerAnim(player, GeoItem.getOrAssignId(player.getItemInHand(hand), serverLevel), "Soul Sand", "soul_sand");
                 ItemStack offhandItem = player.getOffhandItem();
                 if (!player.isCreative())
                     offhandItem.shrink(1);
-                ModEvents.startItemCountdown(player,SieveTables.getSoulDrops(),160);
+                ModEvents.startItemCountdown(player,SieveTables.getSoulDrops(),180);
             }
             /*
             if (player.getOffhandItem().is(Items.SOUL_SOIL))
@@ -191,5 +192,25 @@ public class SieveItem extends Item implements GeoItem
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
+    }
+
+    @Override
+    public boolean onDroppedByPlayer(ItemStack item, Player player) {
+        Level level = player.level();
+        if (item.getItem() instanceof SieveItem sieve) {
+            int damage = getDamage(item);
+            ItemStack damagedItem = item.copy();
+            if (!player.isCreative())
+            {
+                damagedItem.setDamageValue(damage+1);
+            }
+            if (sieve.getAnimationState()) {
+                ItemEntity itemEntity = new ItemEntity(level,0,0,0,damagedItem);
+                itemEntity .moveTo(player.getX(),player.getY(),player.getZ());
+                level.addFreshEntity(itemEntity);
+                return false;
+            }
+        }
+        return super.onDroppedByPlayer(item,player);
     }
 }
