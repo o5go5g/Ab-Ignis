@@ -38,7 +38,7 @@ public class FilterBlock extends HorizontalDirectionalBlock implements EntityBlo
     public FilterBlock(Properties pProperties)
     {
         super(pProperties);
-        registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
+        registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.FALSE).setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -57,6 +57,7 @@ public class FilterBlock extends HorizontalDirectionalBlock implements EntityBlo
         pBuilder.add(FACING,AXIS,WATERLOGGED);
     }
 
+    //why is there hopper code here?
     public void setPlacedBy(Level pLevel, BlockPos pPos, BlockState pState, LivingEntity pPlacer, ItemStack pStack) {
         if (pStack.hasCustomHoverName()) {
             BlockEntity blockentity = pLevel.getBlockEntity(pPos);
@@ -105,16 +106,15 @@ public class FilterBlock extends HorizontalDirectionalBlock implements EntityBlo
         }
     }
 
-    @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
-        BlockState state = ctx.getLevel().getBlockState(ctx.getClickedPos());
+        Direction direction = ctx.getHorizontalDirection().getOpposite();
 
-        boolean isWaterlogged = (state.getFluidState().is(Fluids.WATER) || state.hasProperty(WATERLOGGED)) && fluidstate.getType() == Fluids.WATER;
+        boolean isWaterlogged = fluidstate.getType() == Fluids.WATER;
 
         return defaultBlockState()
-                .setValue(FACING, ctx.getHorizontalDirection().getOpposite())
+                .setValue(FACING, direction)
                 .setValue(WATERLOGGED, isWaterlogged);
     }
 }

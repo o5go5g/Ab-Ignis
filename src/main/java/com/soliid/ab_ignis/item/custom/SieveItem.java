@@ -198,6 +198,7 @@ public class SieveItem extends Item implements GeoItem
     public boolean onDroppedByPlayer(ItemStack item, Player player) {
         Level level = player.level();
         if (item.getItem() instanceof SieveItem sieve) {
+            //sieve.setAnimationState(false);
             int damage = getDamage(item);
             ItemStack damagedItem = item.copy();
             if (!player.isCreative())
@@ -207,7 +208,7 @@ public class SieveItem extends Item implements GeoItem
             if (sieve.getAnimationState()) {
                 ItemEntity itemEntity = new ItemEntity(level,0,0,0,damagedItem);
                 itemEntity .moveTo(player.getX(),player.getY(),player.getZ());
-                level.addFreshEntity(itemEntity);
+                //level.addFreshEntity(itemEntity);
                 return false;
             }
         }

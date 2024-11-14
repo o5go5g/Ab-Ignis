@@ -120,7 +120,6 @@ public class ModEvents
                             sieveItem.isAnimating = false;
                             if (!player.isCreative())
                                 sieveItem.setDamage(stack,stack.getDamageValue()+1);
-                            break;
                         }
                     }
                 }
